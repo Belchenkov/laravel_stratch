@@ -1,22 +1,13 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>{{config('app.name', 'LSAPP')}}</title>
+@section('content')
+    <div class="jumbotron text-center">
+        <h1>{{ $title }}</h1>
+        <p>This is the laravel application</p>
+        <p>
+            <a href="/login" class="btn btn-primary btn-lg"> Login</a>
+            <a href="/register" class="btn btn-success btn-lg"> Register</a>
+        </p>
+    </div>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Barlow:400,700" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Barlow', sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome To Laravel</h1>
-    <p>This is the laravel application</p>
-</body>
-</html>
+@endsection

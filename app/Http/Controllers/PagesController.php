@@ -8,16 +8,19 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $title = 'Welcome To Laravel';
+        return view('pages.index', ['title' => $title]);
     }
 
     public function about()
     {
-        return view('pages.about');
+        $title = 'About Us';
+        return view('pages.about', ['title' => $title]);
     }
 
     public function services()
     {
-        return view('pages.services');
+        $title= 'Services';
+        return view('pages.services', ['title' => $title]);
     }
 }
